@@ -110,7 +110,7 @@ The data was provided as part of the case study and includes user activity, slee
     daily_sleep$Total_hour_Asleep = round((daily_sleep$TotalMinutesAsleep)/60 , 2)
 
 
-5. **Data Exploration**:
+ ## Data Exploration:
 
  - observe the distribution of daily steps: 
 
@@ -118,7 +118,7 @@ The data was provided as part of the case study and includes user activity, slee
     summary(daily_activity$TotalSteps)
     ggplot(daily_activity, aes(x = TotalSteps)) + geom_boxplot() 
 ```
-![steps distribution](https://github.com/user-attachments/assets/000d8496-238c-41b4-b5ab-cdd5f0b4d4aa)
+  ![steps distribution](https://github.com/user-attachments/assets/000d8496-238c-41b4-b5ab-cdd5f0b4d4aa)
 
 Most of the daily total steps appear to be around 4000-11000.
 
@@ -243,7 +243,7 @@ A high standard deviation value could mean that the user alternates very active 
 conversely a low value could indicate a more regular behavior.
 
 
-6. **Visualizations**
+## Visualization
 
 - Relationship between steps taken and calories:
 ```r
@@ -340,13 +340,21 @@ write.csv(hourly_activity, "hourly_activity.csv", row.names = FALSE)
 write.csv(daily_sleep, "daily_sleep.csv", row.names = FALSE)
 ```
 
-
-
+The analyses performed and the data visualization show the following trends: 
+- there is a positive correlation between the number of steps and the calories burned by the users. the more active the user is, the more significant the number of burned calories is.
+- examining the relationship between the steps taken and the time of day. We can observe that the hours after work from 5 to 7 PM, as well as the break hours starting from 12 PM, are the most active.
+- On average, participants slept the most on Sundays, which was also the day they took the least amount of steps.
+- The days on which participants burned the most calories on average are Tuesday and Wednesday.
+- Users who take more steps per day are more likely to accumulate "very active minutes."
 
 
 ## Conclusion
-Bellabeat could focus on promoting weekend relaxation features and fitness challenges during weekdays to align with user behavior.
-
+It is important to note that the data collected comes from a limited sample and user demographic information was not considered part of the analysis.
+- Only a few participants provided weight-related data, suggesting an opportunity for further research to explore this aspect in more detail.
+- On average, participants slept less than the CDC-recommended 7 hours per night, highlighting an opportunity to promote Bellabeat's sleep tracking feature. By leveraging its ability to record users' average wake-up times, Bellabeat could provide personalized bedtime recommendations via notifications to help users achieve better rest. Additionally, marketing the device alongside a meditation app or habit tracker could further support users in improving their sleep patterns.
+- Data indicates that device usage peaks around 6 PM, suggesting that most users follow typical work hours and tend to accumulate the majority of their steps after work. Targeted advertising aimed at working adults could highlight how the device seamlessly tracks steps throughout their busy schedules. Additionally, sending reminder notifications around 12 PM and 8 PM could motivate users to stay active during breaks, such as lunchtime and after dinner, helping them incorporate more movement into their routines.
+- Bellabeat could focus on promoting weekend relaxation features and fitness challenges during weekdays to align with user behavior.
+- To encourage user activity, Bellabeat could introduce a gamified system where users earn points for achieving their daily, weekly, or monthly goals. These points could be redeemed for rewards such as discounts on sports equipment, providing a fun and tangible incentive to stay active and engaged with the platform.
 
 ## Files
 
@@ -357,4 +365,4 @@ Bellabeat could focus on promoting weekend relaxation features and fitness chall
 
 
 ## Author
-[Your Name](https://github.com/tuo-username)
+[Stefano Ciriello](https://github.com/hello-pablo)
